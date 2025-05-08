@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الذيابة- الفاروق</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎡</text></svg>">
+</head>
+<body>
+    <div id="app-container">
+
+        <section class="controls-section">
+             <div class="logo-placeholder">♥ الذيابة_الفَارُوق ♥</div>
+
+             <div id="winnerDisplay" class="hidden">
+                <p> دورك هو:</p> 
+                <p id="winnerName"></p>
+            </div>
+            <button id="spinButton" aria-label="دور العجلة">دور!</button>
+             <p id="participantInfo">أضف مشاركين لتبدأ</p>
+
+            <div class="participant-manager">
+                <h2>المشاركون (<span id="entriesCount">0</span>)</h2>
+                 <div class="input-area">
+                    <input type="text" id="participantInput" placeholder="ادخل دور هنا مثلا مواطن ..." aria-label="؟">
+                    <button id="addButton" aria-label="إضافة مشارك">أضف</button>
+                </div>
+                <div id="participantList" class="participant-list-area">
+                    {/* سيتم ملء القائمة بـ "مشارك ؟" */}
+                </div>
+                <button id="clearButton" class="danger" aria-label="مسح كل المشاركين">مسح الكل</button>
+            </div>
+        </section>
+
+        <section class="wheel-section">
+            <div id="wheelOuterContainer">
+                <div id="wheelContainer">
+                    <canvas id="wheelCanvas"></canvas>
+                    <div id="wheelCenterDecoration"></div>
+                </div>
+                <div id="pointer"></div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+               ───╤ ̵̵͇̿̿̿̿╦︻з=
+        تصاميم وبرمجة (الفاروق)                            
+    </footer>
+
+    <audio id="tickSound" src="tick.mp3" preload="auto"></audio>
+    <audio id="winSound" src="win.mp3" preload="auto"></audio>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
